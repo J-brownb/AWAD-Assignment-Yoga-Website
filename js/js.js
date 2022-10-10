@@ -1,27 +1,14 @@
-let type = "cardio";
-
-//Muscle Search
-let muscle = "calves";
-$.ajax({
+const API = {
+  async: true,
+  crossDomain: true,
+  url: "https://exercisedb.p.rapidapi.com/exercises",
   method: "GET",
-  url: "https://api.api-ninjas.com/v1/exercises?muscle=" + muscle,
-  headers: { "X-Api-Key": "gmIBEECCZrQsin5xQH6KEA==JaIyg13mvczmyLxX" },
-  contentType: "application/json",
-
-  success: function (result) {
-    console.log(result);
+  headers: {
+    "X-RapidAPI-Key": "93a1747e2cmsh37117e509704babp13eb9fjsn4861d9822a66",
+    "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
-});
+};
 
-//Specfic Exercise
-let exercise = "calves";
-$.ajax({
-  method: "GET",
-  url: "https://api.api-ninjas.com/v1/exercises?muscle=" + muscle,
-  headers: { "X-Api-Key": "gmIBEECCZrQsin5xQH6KEA==JaIyg13mvczmyLxX" },
-  contentType: "application/json",
-
-  success: function (result) {
-    console.log(result.name);
-  },
+$.ajax(API).done(function (response) {
+  console.log(response);
 });
