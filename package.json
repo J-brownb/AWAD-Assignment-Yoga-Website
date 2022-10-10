@@ -1,0 +1,7 @@
+{
+  "name": "assignment",
+  "packageManager": "yarn@3.2.4",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+}
