@@ -1,4 +1,4 @@
-const API = {
+const settings = {
   async: true,
   crossDomain: true,
   url: "https://exercisedb.p.rapidapi.com/exercises",
@@ -9,6 +9,6 @@ const API = {
   },
 };
 
-$.ajax(API).done(function (response) {
+$.ajax(settings).done(function (response) {
   console.log(response);
 });
