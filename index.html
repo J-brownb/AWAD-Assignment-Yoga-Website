@@ -27,10 +27,17 @@ navigation"
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="/index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="/exercise-categories.html"
+                >Exercise Category</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/exercise-individual.html"
+                >Individual Exercise</a
+              >
             </li>
           </ul>
           <form action="search.html" method="get" class="d-flex" role="search">
@@ -48,8 +55,22 @@ navigation"
         </div>
       </div>
     </nav>
-    <p id="exercises">All Exercises</p>
+    <p id="exercisesHome">All Exercises</p>
+    <h2>Testing Area</h2>
+    <input
+      class="form-control me-2"
+      id="searching"
+      type="search"
+      placeholder="Stretches..."
+      aria-
+      label="Search"
+    />
+    <button id="exerciseSearchBtn" class="btn btn-primary mt-2 mb-1">
+      Search Exercises <i class="fas fa-film" aria-hidden="true"></i>
+    </button>
+
+    <p id="playgroundHome"></p>
   </body>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/js.js"></script>
+  <script src="/js/home.js"></script>
 </html>

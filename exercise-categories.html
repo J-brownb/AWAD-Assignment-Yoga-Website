@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise Site</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Exercise Site</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar"
+          aria-controls="navbar"
+          aria-expanded="false"
+          aria-label="Toggle
+navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/exercise-categories.html"
+                >Exercise Category</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/exercise-individual.html"
+                >Individual Exercise</a
+              >
+            </li>
+          </ul>
+          <form action="search.html" method="get" class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Stretches..."
+              aria-
+              label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <p id="exercises">All Exercises</p>
+    <h2>Testing Area</h2>
+    <input
+      class="form-control me-2"
+      id="searching"
+      type="search"
+      placeholder="Stretches..."
+      aria-
+      label="Search"
+    />
+    <button id="exerciseSearchBtn" class="btn btn-primary mt-2 mb-1">
+      Search Exercises <i class="fas fa-film" aria-hidden="true"></i>
+    </button>
+
+    <p id="playground">Here</p>
+  </body>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/category.js"></script>
+</html>
