@@ -1,31 +1,34 @@
-//Settings
-const settings = {
-  async: true,
-  crossDomain: true,
-  url: "https://lightning-yoga-api.herokuapp.com/yoga_poses",
-  method: "GET",
-};
+let url = "https://lightning-yoga-api.herokuapp.com/yoga_poses";
 
 //Display All
-$.ajax(settings).done(function (response) {
-  for (let i = 0; i < response.items.length; i++) {
-    let img = response.items[i].img_url;
-    let all =
-      `<li>` +
-      `<img src=${img} width="250" height="250">` +
-      `<br>` +
-      `<strong>English Name:</strong> ${response.items[i].english_name} ` +
-      `<br>` +
-      `<strong>Sanskrit Name:</strong> ${response.items[i].sanskrit_name} ` +
-      `<br>` +
-      `</li>`;
+const displayResults = function (url) {
+  $.ajax(url).done(function (results) {
+    for (let i = 0; i < results.items.length; i++) {
+      let img = results.items[i].img_url;
+      let all =
+        `<li>` +
+        `<img src=${img} width="200" height="200">` +
+        `<br>` +
+        `<strong>English Name:</strong> ${results.items[i].english_name} ` +
+        `<br>` +
+        `<strong>Sanskrit Name:</strong> ${results.items[i].sanskrit_name} ` +
+        `<br>` +
+        // `<strong>Yoga Category:</strong> ${results.items[i].yoga_categories[i].name} ` +
+        // `<br>` +
+        `</li>`;
 
-    $("#playgroundResults").append(all);
-  }
+      $("#results").append(all);
+    }
+  });
+};
+
+displayResults(url);
+
+//Search
+$("#exerciseSearchBtn").on("click", function () {
+  $("#results").empty();
+  let url = "https://lightning-yoga-api.herokuapp.com/yoga_poses";
+  let searchTerm = $("#searching").val();
+  url += "?english_name=" + searchTerm;
+  displayResults(url);
 });
-
-//searching an inidivudual pose, below returns boat
-// https://lightning-yoga-api.herokuapp.com/yoga_poses?english_name=boat
-
-//Showing an entire category, below returns hatha category
-// https://lightning-yoga-api.herokuapp.com/yoga_poses?yoga_category_name=hatha

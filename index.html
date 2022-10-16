@@ -53,20 +53,20 @@ navigation"
         </div>
       </div>
     </nav>
-    <p id="exercisesHome">All Exercises</p>
     <h2>Testing Area</h2>
     <input
       class="form-control me-2"
       id="searching"
       type="search"
-      placeholder="Stretches..."
+      placeholder="Search 100's of yoga poses.."
       aria-
       label="Search"
+      onfocus="this.value=''"
     />
     <button id="exerciseSearchBtn" class="btn btn-primary mt-2 mb-1">
-      Search Exercises <i class="fas fa-film" aria-hidden="true"></i>
+      Search Poses <i class="fas fa-film" aria-hidden="true"></i>
     </button>
-    <ul id="playgroundResults"></ul>
+    <ul id="results"></ul>
   </body>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/js/home.js"></script>

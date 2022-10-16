@@ -1,17 +1,19 @@
 @import "vendors/bootstrap";
 
-#playgroundResults li {
-  max-width: 500px;
-  padding: 50px;
+#results li {
+  width: 300px;
+  padding: 15px;
   list-style-type: none;
   text-align: center;
+  background-color: #d3d3d3;
+  border-radius: 10%;
+  margin: 25px;
 }
 
-#playgroundResults {
+#results {
   display: flex;
   overflow: auto;
   flex-wrap: wrap;
   width: 100%;
-
   justify-content: center;
 }
