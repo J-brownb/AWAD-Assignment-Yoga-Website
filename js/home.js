@@ -1,4 +1,4 @@
-//Searching
+//Settings
 const settings = {
   async: true,
   crossDomain: true,
@@ -6,6 +6,7 @@ const settings = {
   method: "GET",
 };
 
+//Display All
 $.ajax(settings).done(function (response) {
   for (let i = 0; i < response.items.length; i++) {
     let img = response.items[i].img_url;
@@ -22,3 +23,9 @@ $.ajax(settings).done(function (response) {
     $("#playgroundResults").append(all);
   }
 });
+
+//searching an inidivudual pose, below returns boat
+// https://lightning-yoga-api.herokuapp.com/yoga_poses?english_name=boat
+
+//Showing an entire category, below returns hatha category
+// https://lightning-yoga-api.herokuapp.com/yoga_poses?yoga_category_name=hatha
