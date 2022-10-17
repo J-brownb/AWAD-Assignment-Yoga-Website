@@ -5,9 +5,10 @@
   padding: 15px;
   list-style-type: none;
   text-align: center;
-  background-color: #d3d3d3;
+  background-color: #fff;
   border-radius: 10%;
   margin: 25px;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
 #results {
@@ -16,4 +17,12 @@
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
+}
+
+body {
+  background-color: #f7f1ee;
+}
+
+.searchArea {
+  text-align: center;
 }

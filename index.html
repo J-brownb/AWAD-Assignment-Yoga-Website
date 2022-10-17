@@ -53,19 +53,31 @@ navigation"
         </div>
       </div>
     </nav>
-    <h2>Testing Area</h2>
-    <input
-      class="form-control me-2"
-      id="searching"
-      type="search"
-      placeholder="Search 100's of yoga poses.."
-      aria-
-      label="Search"
-      onfocus="this.value=''"
-    />
-    <button id="exerciseSearchBtn" class="btn btn-primary mt-2 mb-1">
-      Search Poses <i class="fas fa-film" aria-hidden="true"></i>
-    </button>
+    <div class="searchArea container pt-5 pb-5">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6">
+          <h2>Search..</h2>
+          <br />
+          <input
+            class="form-control me-2"
+            id="searching"
+            type="search"
+            placeholder="Search 100's of yoga poses.."
+            aria-
+            label="Search"
+            onfocus="this.value=''"
+          />
+          <br />
+
+          <button id="exerciseSearchBtn" class="btn btn-primary mt-2 mb-1">
+            Search Poses <i class="fas fa-film" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+
     <ul id="results"></ul>
   </body>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
