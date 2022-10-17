@@ -12,9 +12,12 @@ const displayResults = function (url) {
         `<strong>English Name:</strong> ${results.items[i].english_name} ` +
         `<br>` +
         `<strong>Sanskrit Name:</strong> ${results.items[i].sanskrit_name} ` +
-        `<br>` +
-        `<strong>Yoga Category:</strong> ${results.items[i].yoga_categories[i].name} ` +
-        `<br>` +
+        // `<br>` +
+        // `<strong>Yoga Categories:</strong> ${results.items[i].yoga_categories[i].name}` +
+        // `, ` +
+        // `${results.items[i].yoga_categories[i + 1].name}` +
+        // `, ` +
+        // `${results.items[i].yoga_categories[i + 2].name}` +
         `</li>`;
 
       $("#results").append(all);
