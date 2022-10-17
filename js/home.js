@@ -13,8 +13,8 @@ const displayResults = function (url) {
         `<br>` +
         `<strong>Sanskrit Name:</strong> ${results.items[i].sanskrit_name} ` +
         `<br>` +
-        // `<strong>Yoga Category:</strong> ${results.items[i].yoga_categories[i].name} ` +
-        // `<br>` +
+        `<strong>Yoga Category:</strong> ${results.items[i].yoga_categories[i].name} ` +
+        `<br>` +
         `</li>`;
 
       $("#results").append(all);
