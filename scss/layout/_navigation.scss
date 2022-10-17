@@ -1,0 +1,12 @@
+header {
+  nav {
+    background-color: $primary-color;
+    a,
+    a:hover,
+    a:active {
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #fff;
+    }
+  }
+}

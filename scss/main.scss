@@ -1,32 +1,17 @@
+// Abstracts
+@import "abstracts/variables";
+// Vendors
 @import "vendors/bootstrap";
-
-#results li {
-  width: 300px;
-  padding: 15px;
-  list-style-type: none;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 10%;
-  margin: 25px;
-  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
-}
-
-#results li {
-  :hover {
-    transform: scale(1.1);
-  }
-}
-#results {
-  display: flex;
-  overflow: auto;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-}
-
-body {
-  background-color: #f7f1ee;
-}
+// Base
+// Layout
+@import "layout/header";
+@import "layout/navigation";
+// Components
+// Pages
+// Themes
+@import "themes/theme";
+//Results
+@import "components/results";
 
 .searchArea {
   text-align: center;

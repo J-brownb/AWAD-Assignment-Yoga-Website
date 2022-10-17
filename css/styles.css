@@ -9310,18 +9310,37 @@ textarea.form-control-lg {
 
   .d-print-none {
     display: none !important; } }
+header {
+  background-color: #f7f1ee; }
+  header .page-header-top {
+    padding: 10px 0 0 0;
+    text-align: center; }
+    header .page-header-top img {
+      max-width: 350px; }
+
+header nav {
+  background-color: #f7f1ee; }
+  header nav a,
+  header nav a:hover,
+  header nav a:active {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff; }
+
 #results li {
   width: 300px;
   padding: 15px;
   list-style-type: none;
   text-align: center;
-  background-color: #fff;
+  background-color: #f7f1ee;
   border-radius: 10%;
   margin: 25px;
-  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3); }
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  opacity: 0.8; }
 
-#results li :hover {
-  transform: scale(1.1); }
+#results :hover {
+  transform: scale(1.01);
+  opacity: 1; }
 
 #results {
   display: flex;
@@ -9329,9 +9348,6 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   width: 100%;
   justify-content: center; }
-
-body {
-  background-color: #f7f1ee; }
 
 .searchArea {
   text-align: center; }
