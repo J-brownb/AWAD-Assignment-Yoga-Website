@@ -2,6 +2,7 @@
   "name": "assignment",
   "packageManager": "yarn@3.2.4",
   "dependencies": {
-    "bootstrap": "^5.2.2"
+    "bootstrap": "^5.2.2",
+    "grunt": "^1.5.3"
   }
 }
