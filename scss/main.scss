@@ -8,10 +8,13 @@
 @import "layout/navigation";
 // Components
 // Pages
+@import "components/results";
+@import "pages/individual";
+@import "pages/category";
+@import "pages/categoryitem";
 // Themes
 @import "themes/theme";
 //Results
-@import "components/results";
 
 .searchArea {
   text-align: center;
