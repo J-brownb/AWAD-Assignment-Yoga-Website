@@ -9424,4 +9424,17 @@ header nav {
   justify-content: center;
   padding-bottom: 15px; }
 
+p,
+li,
+ul {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.2rem; }
+
+h1, .h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; }
+
+h2, .h2 {
+  font-family: "Montserrat", sans-serif; }
+
 /*# sourceMappingURL=styles.css.map */

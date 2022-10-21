@@ -9,7 +9,7 @@ const displayResults = function (url) {
       `<br>` +
       ` We currently have ` +
       `${results.items.length}` +
-      ` amazing core yoga poses for you to try`;
+      ` amazing core yoga poses for you to try.`;
     $(".description").append(desc);
 
     console.log(desc);

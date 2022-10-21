@@ -3,7 +3,7 @@ let url = "https://lightning-yoga-api.herokuapp.com/yoga_poses";
 //Display All
 const displayResults = function (url) {
   $.ajax(url).done(function (results) {
-    for (let i = 0; i < results.items.length; i++) {
+    for (let i = 0; i < 10; i++) {
       let img = results.items[i].img_url;
       let all =
         `<li>` +

@@ -4,26 +4,35 @@ const displayResults = function (url) {
   $.ajax(url).done(function (results) {
     //img
     let img = results.img_url;
-    $("#image").append(`<img src=${img} width="500" height="500">`);
+    $("#image").append(`<img src=${img} width="600" height="400">`);
     //names
     let names = `${results.english_name} ` + `| ` + `${results.sanskrit_name} `;
     $(".names").append(names);
     let all =
-      `The English name for this pose is ${results.english_name} and the Sanskrit name is ${results.sanskrit_name}.` +
-      `<br>` +
-      `<br>` +
-      `This pose falls under the following categories of yoga:` +
+      `The English name for this pose is ${results.english_name} and the Sanskrit name is ${results.sanskrit_name}. This pose falls under the following categories of yoga:` +
       `<br>` +
       `<br>` +
       `<ul>` +
       `<li>` +
+      "<strong>" +
       `${results.yoga_categories[0].name}` +
+      "</strong>" +
+      ` - ` +
+      `${results.yoga_categories[0].description}` +
       `</li>` +
       `<li>` +
+      "<strong>" +
       `${results.yoga_categories[1].name}` +
+      "</strong>" +
+      ` - ` +
+      `${results.yoga_categories[1].description}` +
       `</li>` +
       `<li>` +
+      "<strong>" +
       `${results.yoga_categories[2].name}` +
+      "</strong>" +
+      ` - ` +
+      `${results.yoga_categories[2].description}` +
       `</li>`;
     $("#info").append(all);
   });
