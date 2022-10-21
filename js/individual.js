@@ -1,23 +1,31 @@
-let url = "https://lightning-yoga-api.herokuapp.com/yoga_poses/1";
+let url = "https://lightning-yoga-api.herokuapp.com/yoga_poses/5";
 
 const displayResults = function (url) {
   $.ajax(url).done(function (results) {
+    //img
     let img = results.img_url;
+    $("#image").append(`<img src=${img} width="500" height="500">`);
+    //names
+    let names = `${results.english_name} ` + `| ` + `${results.sanskrit_name} `;
+    $(".names").append(names);
     let all =
+      `The English name for this pose is ${results.english_name} and the Sanskrit name is ${results.sanskrit_name}.` +
+      `<br>` +
+      `<br>` +
+      `This pose falls under the following categories of yoga:` +
+      `<br>` +
+      `<br>` +
+      `<ul>` +
       `<li>` +
-      `<strong>English Name:</strong> ${results.english_name} ` +
-      `<br>` +
-      `<strong>Sanskrit Name:</strong> ${results.sanskrit_name} ` +
-      `<br>` +
-      `<img src=${img} width="100" height="100">` +
-      `<br>` +
-      `<strong>Yoga Categories:</strong> ${results.yoga_categories[0].name}` +
-      `, ` +
+      `${results.yoga_categories[0].name}` +
+      `</li>` +
+      `<li>` +
       `${results.yoga_categories[1].name}` +
-      `, ` +
+      `</li>` +
+      `<li>` +
       `${results.yoga_categories[2].name}` +
       `</li>`;
-    $("#pose").append(all);
+    $("#info").append(all);
   });
 };
 
