@@ -9433,9 +9433,13 @@ ul {
 h1, .h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  color: #083e8d; }
+  color: #0c428d; }
 
 h2, .h2 {
   font-family: "Montserrat", sans-serif; }
+
+button {
+  background-color: #249f20 !important;
+  color: #fff !important; }
 
 /*# sourceMappingURL=styles.css.map */

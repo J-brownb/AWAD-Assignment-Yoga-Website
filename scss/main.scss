@@ -36,9 +36,14 @@ ul {
 h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  color: #083e8d;
+  color: $secondary-color;
 }
 
 h2 {
   font-family: "Montserrat", sans-serif;
+}
+
+button {
+  background-color: $tertiary-color !important;
+  color: #fff !important;
 }
