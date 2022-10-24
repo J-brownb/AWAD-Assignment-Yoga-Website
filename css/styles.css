@@ -9417,6 +9417,9 @@ header nav {
 #test {
   background-color: aliceblue; }
 
+#map {
+  text-align: center; }
+
 .searchArea {
   text-align: center; }
 
