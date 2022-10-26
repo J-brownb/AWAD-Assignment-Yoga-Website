@@ -1,7 +1,22 @@
-function myMap() {
-  var mapProp = {
-    center: new google.maps.LatLng(52.05751341054324, 1.1500896897552568),
-    zoom: 10,
-  };
-  var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-}
+let url =
+  "https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyCYqnXeh46RRRThzx47Cg0J0DH16Jxcp2Q&query=yoga-studios-in-ipswich";
+
+console.log("test");
+
+//Display All
+const displayResults = function (url) {
+  $.ajax(url).done(function (results) {
+    for (let i = 0; i < 10; i++) {
+      let all =
+        `<li>` +
+        `<strong>Name:</strong> ${results[1].name} ` +
+        `<br>` +
+        `</li>`;
+
+      $("#map").append(all);
+      console.log(all);
+    }
+  });
+};
+
+displayResults(url);
