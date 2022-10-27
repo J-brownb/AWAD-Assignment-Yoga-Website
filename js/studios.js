@@ -3,7 +3,7 @@ let url =
   "https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyCYqnXeh46RRRThzx47Cg0J0DH16Jxcp2Q&query=yoga-studios-in-ipswich";
 
 //Display All
-const displayResults = function (url) {
+function displayResults(url) {
   $.ajax(url).done(function (results) {
     for (let i = 0; i < results.results.length; i++) {
       let all =
@@ -19,26 +19,8 @@ const displayResults = function (url) {
       $("#results").append(all);
     }
   });
-};
+}
 displayResults(url);
-
-//lat lng
-let lat = [];
-let lng = [];
-
-const getLatLng = function (url) {
-  $.ajax(url).done(function (results) {
-    for (let i = 0; i < results.results.length; i++) {
-      lat.push(results.results[i].geometry.location.lat);
-      lng.push(results.results[i].geometry.location.lng);
-    }
-  });
-};
-
-getLatLng(url);
-
-// console.log(lat, lng);
-// console.log(lat.length);
 
 //Map
 function initMap() {
@@ -47,8 +29,27 @@ function initMap() {
     center: { lat: 52.0567, lng: 1.1482 },
   };
 
+  //lat lng arrays
+  let lat = [];
+  let lng = [];
+
+  // get lat and lng from api
+  function getLatLng(url) {
+    $.ajax(url).done(function (results) {
+      //loop through lat lng values, push to arrays
+      for (let i = 0; i < results.results.length; i++) {
+        lat.push(results.results[i].geometry.location.lat);
+        lng.push(results.results[i].geometry.location.lng);
+        //call add marker with  array values
+        addMarker({ lat: lat[i], lng: lng[i] });
+      }
+    });
+  }
+  getLatLng(url);
+
   let map = new google.maps.Map(document.getElementById("map"), options);
 
+  // function to add market
   function addMarker(lat, lng) {
     let marker = new google.maps.Marker({
       position: lat,
@@ -56,10 +57,4 @@ function initMap() {
       map,
     });
   }
-  addMarker({ lat: 52.0567, lng: 1.1482 });
-
-  console.log(lat, lng);
-  console.log(lat.length, lng);
-
-  console.log(lat);
 }
