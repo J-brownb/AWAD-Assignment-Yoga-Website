@@ -22,6 +22,24 @@ const displayResults = function (url) {
 };
 displayResults(url);
 
+//lat lng
+let lat = [];
+let lng = [];
+
+const getLatLng = function (url) {
+  $.ajax(url).done(function (results) {
+    for (let i = 0; i < results.results.length; i++) {
+      lat.push(results.results[i].geometry.location.lat);
+      lng.push(results.results[i].geometry.location.lng);
+    }
+  });
+};
+
+getLatLng(url);
+
+// console.log(lat, lng);
+// console.log(lat.length);
+
 //Map
 function initMap() {
   let options = {
@@ -38,26 +56,10 @@ function initMap() {
       map,
     });
   }
-  addMarker({ lat: 52.0167, lng: 1.1482 });
-  // addMarker({ lat: 52.0267, lng: 1.1252 });
-  // addMarker({ lat: 52.0467, lng: 1.1362 });
+  addMarker({ lat: 52.0567, lng: 1.1482 });
+
+  console.log(lat, lng);
+  console.log(lat.length, lng);
+
+  console.log(lat);
 }
-
-//lat lng
-let latlng = [];
-const getLatLng = function (url) {
-  $.ajax(url).done(function (results) {
-    for (let i = 0; i < results.results.length; i++) {
-      let latlng = [
-        results.results[i].geometry.location.lat,
-        results.results[i].geometry.location.lng,
-      ];
-      console.log(latlng);
-    }
-  });
-};
-getLatLng(url);
-console.log(latlng);
-
-// latArray.push(results.results[i].geometry.location.lat);
-// lngArray.push(results.results[i].geometry.location.lng);
