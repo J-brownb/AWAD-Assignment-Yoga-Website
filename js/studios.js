@@ -14,10 +14,13 @@ function displayResults(url) {
         `<br>` +
         `${results.results[i].formatted_address} ` +
         `<br>` +
+        `<br>` +
+        `This studio is rated ${results.results[i].rating}/5 based on ${results.results[i].user_ratings_total} reviews` +
         `</li>`;
 
       $("#results").append(all);
     }
+    $("#intro").prepend(`We found ${results.results.length}`);
   });
 }
 displayResults(url);
@@ -25,7 +28,7 @@ displayResults(url);
 //Map
 function initMap() {
   let options = {
-    zoom: 11,
+    zoom: 12,
     center: { lat: 52.0567, lng: 1.1482 },
   };
 
@@ -55,6 +58,11 @@ function initMap() {
       position: lat,
       lng,
       map,
+      title: "Click to zoom",
+    });
+    marker.addListener("click", () => {
+      map.setZoom(15);
+      map.setCenter(marker.getPosition());
     });
   }
 }

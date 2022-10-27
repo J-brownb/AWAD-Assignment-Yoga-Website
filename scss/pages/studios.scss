@@ -1,20 +1,4 @@
 #map {
-  text-align: center;
-}
-
-#map li {
-  width: 300px;
-  padding: 15px;
-  list-style-type: none;
-  text-align: center;
-  background-color: $primary-color;
-  border-radius: 10%;
-  margin: 25px;
-  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
-  opacity: 0.8;
-}
-
-#map {
   :hover {
     transform: scale(1.01);
     opacity: 1;
@@ -26,4 +10,24 @@
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
+  text-align: center;
+  height: 400px;
+  width: 100%;
+
+  li {
+    width: 300px;
+    padding: 15px;
+    list-style-type: none;
+    text-align: center;
+    background-color: $primary-color;
+    border-radius: 10%;
+    margin: 25px;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+    opacity: 0.8;
+  }
+}
+
+#map button {
+  background-color: #fff !important;
+  color: #000 !important;
 }
