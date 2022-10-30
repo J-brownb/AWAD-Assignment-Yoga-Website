@@ -6,6 +6,22 @@ let url =
 function displayResults(url) {
   $.ajax(url).done(function (results) {
     for (let i = 0; i < results.results.length; i++) {
+      //Ratings
+      let rating = results.results[i].rating;
+      if (rating == 0) {
+        rating = "";
+      } else if (rating <= 1) {
+        rating = "⭐";
+      } else if (rating <= 2) {
+        rating = "⭐⭐";
+      } else if (rating <= 3) {
+        rating = "⭐⭐⭐";
+      } else if (rating <= 4) {
+        rating = "⭐⭐⭐⭐";
+      } else if (rating <= 5) {
+        rating = "⭐⭐⭐⭐⭐";
+      }
+      //Other info
       let all =
         `<li>` +
         `<strong>${results.results[i].name} ` +
@@ -16,10 +32,13 @@ function displayResults(url) {
         `<br>` +
         `<br>` +
         `This studio is rated ${results.results[i].rating}/5 based on ${results.results[i].user_ratings_total} reviews` +
+        "<br>" +
+        rating +
         `</li>`;
-
+      //Append info to results
       $("#results").append(all);
     }
+    //Intro text before map
     $("#intro").prepend(`We found ${results.results.length}`);
   });
 }
@@ -52,17 +71,28 @@ function initMap() {
 
   let map = new google.maps.Map(document.getElementById("map"), options);
 
-  // function to add market
+  // function to add marker
   function addMarker(lat, lng) {
     let marker = new google.maps.Marker({
       position: lat,
       lng,
       map,
-      title: "Click to zoom",
+      title: "Click for more information",
     });
+
+    //set info box text
+    const infoBox = "Need to get this changed!";
+    const infowindow = new google.maps.InfoWindow({
+      content: infoBox,
+    });
+
     marker.addListener("click", () => {
       map.setZoom(15);
       map.setCenter(marker.getPosition());
+      infowindow.open({
+        anchor: marker,
+        map,
+      });
     });
   }
 }
