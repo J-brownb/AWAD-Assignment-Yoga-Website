@@ -3,44 +3,49 @@ let url =
   "https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyCYqnXeh46RRRThzx47Cg0J0DH16Jxcp2Q&query=yoga-studios-in-ipswich";
 
 //Display All
+
 function displayResults(url) {
-  $.ajax(url).done(function (results) {
-    for (let i = 0; i < results.results.length; i++) {
-      //Ratings
-      let rating = results.results[i].rating;
-      if (rating == 0) {
-        rating = "";
-      } else if (rating <= 1) {
-        rating = "⭐";
-      } else if (rating <= 2) {
-        rating = "⭐⭐";
-      } else if (rating <= 3) {
-        rating = "⭐⭐⭐";
-      } else if (rating <= 4) {
-        rating = "⭐⭐⭐⭐";
-      } else if (rating <= 5) {
-        rating = "⭐⭐⭐⭐⭐";
+  fetch(url)
+    .then((response) => response.json())
+    .then(function (results) {
+      console.log(results);
+      console.log(url);
+      for (let i = 0; i < results.results.length; i++) {
+        //Ratings
+        let rating = results.results[i].rating;
+        if (rating == 0) {
+          rating = "";
+        } else if (rating <= 1) {
+          rating = "⭐";
+        } else if (rating <= 2) {
+          rating = "⭐⭐";
+        } else if (rating <= 3) {
+          rating = "⭐⭐⭐";
+        } else if (rating <= 4) {
+          rating = "⭐⭐⭐⭐";
+        } else if (rating <= 5) {
+          rating = "⭐⭐⭐⭐⭐";
+        }
+        //Other info
+        let all =
+          `<li>` +
+          `<strong>${results.results[i].name} ` +
+          `</strong>` +
+          `<br>` +
+          `<br>` +
+          `${results.results[i].formatted_address} ` +
+          `<br>` +
+          `<br>` +
+          `This studio is rated ${results.results[i].rating}/5 based on ${results.results[i].user_ratings_total} reviews` +
+          "<br>" +
+          rating +
+          `</li>`;
+        //Append info to results
+        $("#results").append(all);
       }
-      //Other info
-      let all =
-        `<li>` +
-        `<strong>${results.results[i].name} ` +
-        `</strong>` +
-        `<br>` +
-        `<br>` +
-        `${results.results[i].formatted_address} ` +
-        `<br>` +
-        `<br>` +
-        `This studio is rated ${results.results[i].rating}/5 based on ${results.results[i].user_ratings_total} reviews` +
-        "<br>" +
-        rating +
-        `</li>`;
-      //Append info to results
-      $("#results").append(all);
-    }
-    //Intro text before map
-    $("#intro").prepend(`We found ${results.results.length}`);
-  });
+      //Intro text before map
+      $("#intro").prepend(`We found ${results.results.length}`);
+    });
 }
 displayResults(url);
 
