@@ -3,7 +3,10 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks("grunt-sass");
   grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.registerTask("default", ["watch:scss"]);
+  grunt.loadNpmTasks("grunt-concurrent");
+  grunt.loadNpmTasks("grunt-contrib-uglify");
+  grunt.registerTask("default", ["concurrent:watchall"]);
+  grunt.registerTask("vendors", ["uglify:vendor"]);
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
     sass: {
@@ -18,6 +21,7 @@ module.exports = function (grunt) {
         },
       },
     },
+
     watch: {
       scss: {
         files: ["./scss/**/*.scss"],
@@ -25,6 +29,47 @@ module.exports = function (grunt) {
         options: {
           spawn: false,
         },
+      },
+      js: {
+        files: ["./scripts/**/*.js"],
+        tasks: ["uglify:main"],
+        options: {
+          spawn: false,
+        },
+      },
+    },
+
+    uglify: {
+      main: {
+        options: {
+          sourceMap: false,
+          compress: true,
+          mangle: false,
+        },
+        files: {
+          "./js/scripts.min.js": ["./scripts/*.js"],
+        },
+      },
+      vendor: {
+        options: {
+          sourceMap: false,
+          compress: true,
+          mangle: false,
+        },
+        files: {
+          "./js/scripts-vendor.min.js": [
+            "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+          ],
+        },
+      },
+    },
+    concurrent: {
+      options: {
+        logConcurrentOutput: true,
+        limit: 10,
+      },
+      watchall: {
+        tasks: ["watch:scss", "watch:js"],
       },
     },
   });
