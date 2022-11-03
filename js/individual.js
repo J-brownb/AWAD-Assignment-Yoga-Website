@@ -4,6 +4,7 @@ function displayResults(url) {
   fetch(url)
     .then((response) => response.json())
     .then(function (results) {
+      let info = document.getElementById("info");
       //img
       let img = results.img_url;
       $("#image").append(`<img src=${img} width="600" height="400">`);
@@ -37,8 +38,8 @@ function displayResults(url) {
         ` - ` +
         `${results.yoga_categories[2].description}` +
         `</li>`;
-      $("#info").append(all);
+      //Append info to results
+      info.innerHTML += all;
     });
 }
-
 displayResults(url);
