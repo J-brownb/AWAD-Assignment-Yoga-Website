@@ -8,8 +8,6 @@ function displayResults(url) {
   fetch(url)
     .then((response) => response.json())
     .then(function (results) {
-      console.log(results);
-      console.log(url);
       for (let i = 0; i < results.results.length; i++) {
         //Ratings
         let rating = results.results[i].rating;
@@ -41,7 +39,8 @@ function displayResults(url) {
           rating +
           `</li>`;
         //Append info to results
-        $("#results").append(all);
+        let mapHTML = document.getElementById("results");
+        mapHTML.innerHTML += all;
       }
       //Intro text before map
       $("#intro").prepend(`We found ${results.results.length}`);
@@ -62,15 +61,17 @@ function initMap() {
 
   // get lat and lng from api
   function getLatLng(url) {
-    $.ajax(url).done(function (results) {
-      //loop through lat lng values, push to arrays
-      for (let i = 0; i < results.results.length; i++) {
-        lat.push(results.results[i].geometry.location.lat);
-        lng.push(results.results[i].geometry.location.lng);
-        //call add marker with  array values
-        addMarker({ lat: lat[i], lng: lng[i] });
-      }
-    });
+    fetch(url)
+      .then((response) => response.json())
+      .then(function (results) {
+        //loop through lat lng values, push to arrays
+        for (let i = 0; i < results.results.length; i++) {
+          lat.push(results.results[i].geometry.location.lat);
+          lng.push(results.results[i].geometry.location.lng);
+          //call add marker with  array values
+          addMarker({ lat: lat[i], lng: lng[i] });
+        }
+      });
   }
   getLatLng(url);
 

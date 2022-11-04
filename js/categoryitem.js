@@ -15,8 +15,7 @@ function displayResults(url) {
         `${results.items.length}` +
         ` amazing core yoga poses for you to try.`;
       $(".description").append(desc);
-
-      console.log(desc);
+      let poses = document.getElementById("categorylist");
       for (let i = 0; i < results.items.length; i++) {
         let img = results.items[i].img_url;
         let all =
@@ -27,7 +26,8 @@ function displayResults(url) {
           `<br>` +
           `<strong>Sanskrit Name:</strong> ${results.items[i].sanskrit_name} ` +
           `</li>`;
-        $("#categorylist").append(all);
+        //Append info to results
+        poses.innerHTML += all;
       }
     });
 }

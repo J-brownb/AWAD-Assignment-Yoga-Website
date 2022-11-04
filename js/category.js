@@ -6,6 +6,7 @@ function displayResults(url) {
   fetch(url)
     .then((response) => response.json())
     .then(function (results) {
+      let poses = document.getElementById("category");
       for (let i = 0; i < 12; i++) {
         //img
         let img = results.items[i].yoga_poses[1].img_url;
@@ -35,7 +36,8 @@ function displayResults(url) {
           `View more poses in this category` +
           `</a>` +
           `</li>`;
-        $("#category").append(all);
+        //Append info to results
+        poses.innerHTML += all;
       }
     });
 }
