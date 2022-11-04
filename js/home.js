@@ -23,7 +23,6 @@ function displayResults(url) {
           // `${results.items[i].yoga_categories[i + 2].name}` +
           `</li>`;
         poses.innerHTML += all;
-        // $("#results").append(all);
       }
     });
 }
@@ -31,10 +30,14 @@ function displayResults(url) {
 displayResults(url);
 
 //Search
-$("#exerciseSearchBtn").on("click", function () {
-  $("#results").empty();
+let searchBtn = document.getElementById("exerciseSearchBtn");
+let poses = document.getElementById("results");
+searchBtn.addEventListener("click", function () {
+  poses.innerHTML = "";
+  let searchTerm = document.getElementById("searching").value;
   let url = "https://lightning-yoga-api.herokuapp.com/yoga_poses";
-  let searchTerm = $("#searching").val();
   url += "?english_name=" + searchTerm;
+  console.log(url);
+  console.log(searchTerm);
   displayResults(url);
 });
