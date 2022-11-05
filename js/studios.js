@@ -43,7 +43,10 @@ function displayResults(url) {
         mapHTML.innerHTML += all;
       }
       //Intro text before map
-      $("#intro").prepend(`We found ${results.results.length}`);
+      let intro = document.getElementById("intro");
+      console.log(intro);
+      let text = `We found ${results.results.length} `;
+      intro.insertAdjacentText("afterbegin", text);
     });
 }
 displayResults(url);

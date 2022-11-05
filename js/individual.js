@@ -8,10 +8,12 @@ function displayResults(url) {
       //img
       let img = results.img_url;
       $("#image").append(`<img src=${img} width="600" height="400">`);
-      //names
+      //Header
+      let header = document.getElementById("header");
       let names =
         `${results.english_name} ` + `| ` + `${results.sanskrit_name} `;
-      $(".names").append(names);
+      header.innerHTML = names;
+
       let all =
         `The English name for this pose is ${results.english_name} and the Sanskrit name is ${results.sanskrit_name}. This pose falls under the following categories of yoga:` +
         `<br>` +
