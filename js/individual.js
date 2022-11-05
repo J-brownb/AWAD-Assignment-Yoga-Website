@@ -7,7 +7,8 @@ function displayResults(url) {
       let info = document.getElementById("info");
       //img
       let img = results.img_url;
-      $("#image").append(`<img src=${img} width="600" height="400">`);
+      let imgContainer = document.getElementById("image");
+      imgContainer.innerHTML = `<img src=${img} width="600" height="400">`;
       //Header
       let header = document.getElementById("header");
       let names =
