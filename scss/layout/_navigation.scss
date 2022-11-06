@@ -1,6 +1,7 @@
 header {
   nav {
     background-color: $primary-color;
+    justify-content: center !important;
 
     a,
     a:hover,
@@ -10,7 +11,3 @@ header {
     }
   }
 }
-
-// .nav-link {
-//   font-weight: 500;
-// }

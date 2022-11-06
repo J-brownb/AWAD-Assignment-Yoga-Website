@@ -1,18 +1,13 @@
-#map {
+#results {
   :hover {
     transform: scale(1.01);
     opacity: 1;
   }
 }
-#map {
+#results {
   display: flex;
   overflow: auto;
   flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  text-align: center;
-  height: 400px;
-  width: 100%;
 
   li {
     width: 300px;
@@ -27,7 +22,12 @@
   }
 }
 
-#map button {
-  background-color: #fff !important;
-  color: #000 !important;
+#map {
+  height: 400px;
+  width: 100%;
+
+  button {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
 }

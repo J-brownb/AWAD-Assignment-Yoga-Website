@@ -1,0 +1,21 @@
+#map {
+  height: 400px;
+  width: 100%;
+
+  button {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+}
+
+.searchArea {
+  text-align: center;
+}
+
+.hero {
+  background-image: url(/images/home-background-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  margin-bottom: 3rem;
+}
