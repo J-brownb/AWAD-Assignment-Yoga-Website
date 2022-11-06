@@ -40,10 +40,11 @@ h2 {
 
 button {
   background-color: $tertiary-color !important;
-  color: #fff !important;
+  color: #000 !important;
   border-radius: 10px;
   padding: 5px 25px 5px 25px;
   border-color: #fff;
+  text-transform: uppercase;
 }
 
 .cream {
