@@ -3,11 +3,14 @@ header {
     background-color: $primary-color;
     justify-content: center !important;
 
-    a,
+    a {
+      font-weight: 500 !important;
+      text-transform: uppercase;
+      color: #000 !important;
+    }
     a:hover,
     a:active {
-      text-transform: uppercase;
-      font-weight: 800 !important;
+      font-weight: 700 !important;
     }
   }
 }
