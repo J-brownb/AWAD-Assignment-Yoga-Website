@@ -15,7 +15,7 @@ function displayResults(url) {
     .then(function (results) {
       let poses = document.getElementById("results");
       // for (let i = 0; i < results.items.length; i++) {
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 8; i++) {
         let img = results.items[i].img_url;
         let all =
           `<li>` +
