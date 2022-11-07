@@ -57,7 +57,8 @@ button {
 .footerhead {
   font-weight: 600;
   font-size: 1.4rem;
-  // text-align: center;
+  color: $secondary-color;
+  text-align: center;
 }
 
 footer {
@@ -66,6 +67,24 @@ footer {
 
   li {
     list-style-type: none;
+  }
+
+  .social-icons li {
+    display: inline-block;
+    font-size: 2rem;
+  }
+}
+
+body {
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+  }
+  a:hover {
+    // text-decoration: underline;
+    font-weight: 600;
+    color: $tertiary-color;
+    transition-duration: 0.3s;
   }
 }
 
