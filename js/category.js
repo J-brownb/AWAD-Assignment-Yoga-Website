@@ -1,6 +1,14 @@
 let url = "https://lightning-yoga-api.herokuapp.com/yoga_categories";
 let catName =
   "https://lightning-yoga-api.herokuapp.com/yoga_poses?yoga_category_name=";
+//Loading Icon
+let loadingIcon = `<div class="d-flex justify-content-center" id="spinner">
+<div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+</div>`;
+let loading = document.getElementById("loadingarea");
+loadingarea.innerHTML = loadingIcon;
 
 function displayResults(url) {
   fetch(url)
@@ -38,6 +46,7 @@ function displayResults(url) {
           `</li>`;
         //Append info to results
         poses.innerHTML += all;
+        loadingarea.innerHTML = " ";
       }
     });
 }
