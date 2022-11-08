@@ -6,7 +6,7 @@ let loadingIcon = `<div class="d-flex justify-content-center" id="spinner">
 </div>
 </div>`;
 let loading = document.getElementById("loadingarea");
-loadingarea.innerHTML = loadingIcon;
+loading.innerHTML = loadingIcon;
 
 //Display All
 function displayResults(url) {
@@ -32,7 +32,7 @@ function displayResults(url) {
           // `${results.items[i].yoga_categories[i + 2].name}` +
           `</li>`;
         poses.innerHTML += all;
-        loadingarea.innerHTML = " ";
+        loading.innerHTML = " ";
       }
     });
 }
