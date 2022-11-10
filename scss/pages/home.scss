@@ -29,3 +29,27 @@
   background-color: $tertiary-color;
   margin: 10px;
 }
+
+.loadmore {
+  text-align: center;
+}
+.imgborderleft img {
+  border: 2px solid #000;
+  box-shadow: -10px 10px 0px 0px $tertiary-color;
+}
+
+.imgborderright img {
+  border: 2px solid #000;
+  box-shadow: 10px 10px 0px 0px $tertiary-color;
+}
+
+@media only screen and (max-width: 576px) {
+  body {
+    .reverseflex {
+      flex-direction: column-reverse;
+    }
+    button {
+      margin-bottom: 1rem;
+    }
+  }
+}

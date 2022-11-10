@@ -14,8 +14,10 @@ function displayResults(url) {
     .then((response) => response.json())
     .then(function (results) {
       let poses = document.getElementById("results");
+      let loadMore = document.getElementById("loadmore");
+      let count = 4;
       // for (let i = 0; i < results.items.length; i++) {
-      for (let i = 0; i < 8; i++) {
+      for (let i = 0; i < count; i++) {
         let img = results.items[i].img_url;
         let all =
           `<li>` +

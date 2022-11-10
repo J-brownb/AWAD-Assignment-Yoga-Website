@@ -37,14 +37,21 @@ h2 {
   font-weight: 600;
   color: $secondary-color;
 }
-
-button {
-  background-color: $tertiary-color !important;
-  color: #000 !important;
-  border-radius: 10px;
-  padding: 5px 25px 5px 25px;
-  border-width: 0px;
-  text-transform: uppercase;
+body {
+  button {
+    background-color: $tertiary-color !important;
+    color: #000 !important;
+    border-radius: 10px;
+    padding: 5px 25px 5px 25px;
+    border-width: 0px;
+    text-transform: uppercase;
+  }
+  button:hover {
+    color: #fff !important;
+    transition-duration: 0.5s;
+    background-color: $secondary-color !important;
+    transition-duration: 0.5s;
+  }
 }
 
 .cream {
@@ -81,9 +88,18 @@ body {
     text-decoration: none;
   }
   a:hover {
-    // text-decoration: underline;
-    font-weight: 600;
     color: $tertiary-color;
     transition-duration: 0.3s;
   }
+}
+
+h1,
+h2 {
+  padding-bottom: 1rem;
+  padding: 1rem 0 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
