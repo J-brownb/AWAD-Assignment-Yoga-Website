@@ -8,15 +8,37 @@ let loadingIcon = `<div class="d-flex justify-content-center" id="spinner">
 let loading = document.getElementById("loadingarea");
 loading.innerHTML = loadingIcon;
 
+//alternatively, set count variable out here and add value based on user action
+
+//Load more poses
+let clicked = false;
+let loadMore = document.getElementById("loadmore");
+let loadLess = document.getElementById("loadfewer");
+loadMore.addEventListener("click", function () {
+  clicked = !clicked;
+  poses.innerHTML = "";
+  displayResults(url);
+  loadMore.classList.add("hidden");
+  loadLess.classList.remove("hidden");
+});
+
+//Load fewer poses
+loadLess.addEventListener("click", function () {
+  clicked = !clicked;
+  poses.innerHTML = "";
+  displayResults(url);
+  loadMore.classList.remove("hidden");
+  loadLess.classList.add("hidden");
+});
+
 //Display All
 function displayResults(url) {
   fetch(url)
     .then((response) => response.json())
     .then(function (results) {
       let poses = document.getElementById("results");
-      let loadMore = document.getElementById("loadmore");
-      let count = 4;
       // for (let i = 0; i < results.items.length; i++) {
+      let count = clicked ? 8 : 4;
       for (let i = 0; i < count; i++) {
         let img = results.items[i].img_url;
         let all =
@@ -26,22 +48,15 @@ function displayResults(url) {
           `<strong>English Name:</strong> ${results.items[i].english_name} ` +
           `<br>` +
           `<strong>Sanskrit Name:</strong> ${results.items[i].sanskrit_name} ` +
-          // `<br>` +
-          // `<strong>Yoga Categories:</strong> ${results.items[i].yoga_categories[i].name}` +
-          // `, ` +
-          // `${results.items[i].yoga_categories[i + 1].name}` +
-          // `, ` +
-          // `${results.items[i].yoga_categories[i + 2].name}` +
           `</li>`;
         poses.innerHTML += all;
         loading.innerHTML = " ";
       }
     });
 }
-
 displayResults(url);
 
-//Search
+//Search functionality
 let searchBtn = document.getElementById("exerciseSearchBtn");
 let poses = document.getElementById("results");
 searchBtn.addEventListener("click", function () {
