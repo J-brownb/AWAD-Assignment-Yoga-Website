@@ -2,8 +2,18 @@
 let url =
   "https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyCYqnXeh46RRRThzx47Cg0J0DH16Jxcp2Q&query=yoga-studios-in-ipswich";
 
-//Display All
+//Dropdown menu
+let dropdown = document.getElementById("dropdownmenu");
+let menuItems = document.getElementById("menuitems");
+dropdown.addEventListener("click", function () {
+  menuItems.style.display = "block";
+});
 
+dropdown.addEventListener("mouseleave", function () {
+  menuItems.style.display = "none";
+});
+
+//Display All
 function displayResults(url) {
   fetch(url)
     .then((response) => response.json())

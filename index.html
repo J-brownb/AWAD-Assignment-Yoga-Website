@@ -19,6 +19,7 @@
   </head>
   <body>
     <header>
+      
       <div class="page-header-top container">
       <nav class="navbar navbar-expand-lg">
         <a href="index.html"
@@ -45,10 +46,16 @@ navigation"
               <li class="nav-item">
                 <a class="nav-link" href="/index.html">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/yoga-categories.html"
-                  >Yoga Category</a
-                >
+              <div id ="dropdownmenu">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Yoga Categories
+                </a>
+                <div class="dropdown-menu" id="menuitems" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/yoga-categories.html">All Categories</a>
+                  <a class="dropdown-item" href="/yoga-categories/core-yoga-poses.html">Core Yoga Poses</a>
+                </div>
+              </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/yoga-individual.html"
@@ -95,7 +102,7 @@ navigation"
 
 
     <ul id="results" class="pb-2"></ul>
-    <div class="loadmore pb-5">
+    <div class="loadmore">
       <button id="loadmore">Show More Poses</button>
       <button id="loadfewer" class="hidden">Show Fewer Poses</button>
 
@@ -132,7 +139,7 @@ navigation"
       <div class="container">
         <div class="row pt-5 pb-5 gx-5 reverseflex">
           <div class="col-sm imgborderleft">
-            <img src="./images/woman-stretching.jpg" class="mx-auto d-block" alt="Yoga Site Logo" />
+            <img src="./images/man doing yoga.png" class="mx-auto d-block" alt="Yoga Site Logo" />
           </div>
           <div class="col-sm">
             <h2>Core Yoga Poses 2</h2>

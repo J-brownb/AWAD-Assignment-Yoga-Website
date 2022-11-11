@@ -1,6 +1,18 @@
 let url = "https://lightning-yoga-api.herokuapp.com/yoga_categories";
 let catName =
   "https://lightning-yoga-api.herokuapp.com/yoga_poses?yoga_category_name=";
+
+//Dropdown menu
+let dropdown = document.getElementById("dropdownmenu");
+let menuItems = document.getElementById("menuitems");
+dropdown.addEventListener("click", function () {
+  menuItems.style.display = "block";
+});
+
+dropdown.addEventListener("mouseleave", function () {
+  menuItems.style.display = "none";
+});
+
 //Loading Icon
 let loadingIcon = `<div class="d-flex justify-content-center" id="spinner">
 <div class="spinner-border" role="status">

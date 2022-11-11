@@ -8,6 +8,17 @@ let loadingIcon = `<div class="d-flex justify-content-center" id="spinner">
 let loading = document.getElementById("loadingarea");
 loading.innerHTML = loadingIcon;
 
+//Dropdown menu
+let dropdown = document.getElementById("dropdownmenu");
+let menuItems = document.getElementById("menuitems");
+dropdown.addEventListener("click", function () {
+  menuItems.style.display = "block";
+});
+
+dropdown.addEventListener("mouseleave", function () {
+  menuItems.style.display = "none";
+});
+
 //alternatively, set count variable out here and add value based on user action
 
 //Load more poses

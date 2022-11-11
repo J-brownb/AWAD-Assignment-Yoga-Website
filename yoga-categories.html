@@ -19,6 +19,7 @@
 </html>
 <body>
   <header>
+      
     <div class="page-header-top container">
     <nav class="navbar navbar-expand-lg">
       <a href="index.html"
@@ -45,10 +46,16 @@ navigation"
             <li class="nav-item">
               <a class="nav-link" href="/index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/yoga-categories.html"
-                >Yoga Category</a
-              >
+            <div id ="dropdownmenu">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Yoga Categories
+              </a>
+              <div class="dropdown-menu" id="menuitems" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/yoga-categories.html">All Categories</a>
+                <a class="dropdown-item" href="/yoga-categories/core-yoga-poses.html">Core Yoga Poses</a>
+              </div>
+            </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/yoga-individual.html"

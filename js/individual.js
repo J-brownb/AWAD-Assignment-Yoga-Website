@@ -1,5 +1,17 @@
 let url = "https://lightning-yoga-api.herokuapp.com/yoga_poses/5";
 
+//Dropdown menu
+let dropdown = document.getElementById("dropdownmenu");
+let menuItems = document.getElementById("menuitems");
+dropdown.addEventListener("click", function () {
+  menuItems.style.display = "block";
+});
+
+dropdown.addEventListener("mouseleave", function () {
+  menuItems.style.display = "none";
+});
+
+//Display results
 function displayResults(url) {
   fetch(url)
     .then((response) => response.json())
@@ -8,7 +20,7 @@ function displayResults(url) {
       //img
       let img = results.img_url;
       let imgContainer = document.getElementById("image");
-      imgContainer.innerHTML = `<img src=${img} width="600" height="400">`;
+      imgContainer.innerHTML = `<img src=${img} width="500" height="400">`;
       //Header
       let header = document.getElementById("header");
       let names =
@@ -27,6 +39,7 @@ function displayResults(url) {
         ` - ` +
         `${results.yoga_categories[0].description}` +
         `</li>` +
+        `<br>` +
         `<li>` +
         "<strong>" +
         `${results.yoga_categories[1].name}` +
@@ -34,6 +47,7 @@ function displayResults(url) {
         ` - ` +
         `${results.yoga_categories[1].description}` +
         `</li>` +
+        `<br>` +
         `<li>` +
         "<strong>" +
         `${results.yoga_categories[2].name}` +
