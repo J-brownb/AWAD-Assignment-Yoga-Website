@@ -99,6 +99,8 @@ function initMap() {
       title: "Click for more information",
     });
 
+    //
+
     //set info box text
     const infoBox = "Need to get this changed!";
     const infowindow = new google.maps.InfoWindow({
