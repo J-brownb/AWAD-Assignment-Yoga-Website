@@ -54,7 +54,6 @@ function displayResults(url) {
       }
       //Intro text before map
       let intro = document.getElementById("intro");
-      console.log(intro);
       let text = `We found ${results.results.length} `;
       intro.insertAdjacentText("afterbegin", text);
     });
@@ -71,6 +70,7 @@ function initMap() {
   //lat lng arrays
   let lat = [];
   let lng = [];
+  let title = [];
 
   // get lat and lng from api
   function getLatLng(url) {
@@ -81,8 +81,10 @@ function initMap() {
         for (let i = 0; i < results.results.length; i++) {
           lat.push(results.results[i].geometry.location.lat);
           lng.push(results.results[i].geometry.location.lng);
+          title.push(results.results[i].name);
+          console.log(title[i]);
           //call add marker with  array values
-          addMarker({ lat: lat[i], lng: lng[i] });
+          addMarker({ lat: lat[i], lng: lng[i], title: title[i] });
         }
       });
   }
@@ -90,30 +92,31 @@ function initMap() {
 
   let map = new google.maps.Map(document.getElementById("map"), options);
 
+  //why wont title push to the marker???
   // function to add marker
-  function addMarker(lat, lng) {
+  function addMarker(lat, lng, title) {
     let marker = new google.maps.Marker({
       position: lat,
       lng,
       map,
-      title: "Click for more information",
+      title: title,
     });
 
     //
 
-    //set info box text
-    const infoBox = "Need to get this changed!";
-    const infowindow = new google.maps.InfoWindow({
-      content: infoBox,
-    });
+    // //set info box text
+    // const infoBox = "Need to get this changed!";
+    // const infowindow = new google.maps.InfoWindow({
+    //   content: infoBox,
+    // });
 
     marker.addListener("click", () => {
       map.setZoom(15);
       map.setCenter(marker.getPosition());
-      infowindow.open({
-        anchor: marker,
-        map,
-      });
+      // infowindow.open({
+      //   anchor: marker,
+      //   map,
+      // });
     });
   }
 }
