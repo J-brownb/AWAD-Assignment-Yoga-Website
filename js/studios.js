@@ -70,7 +70,6 @@ function initMap() {
   //lat lng arrays
   let lat = [];
   let lng = [];
-  let title = [];
 
   // get lat and lng from api
   function getLatLng(url) {
@@ -85,18 +84,14 @@ function initMap() {
           //call add marker with  array values
           addMarker({ lat: lat[i], lng: lng[i] });
         }
-        console.log(title);
       });
   }
   getLatLng(url);
 
   let map = new google.maps.Map(document.getElementById("map"), options);
 
-  //why wont title push to the marker???
   // function to add marker
   function addMarker(lat, lng) {
-    // console.log(title);
-
     let marker = new google.maps.Marker({
       position: lat,
       lng,
