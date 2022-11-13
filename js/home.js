@@ -40,6 +40,7 @@ loadLess.addEventListener("click", function () {
   displayResults(url);
   loadMore.classList.remove("hidden");
   loadLess.classList.add("hidden");
+  document.documentElement.scrollTop = 50;
 });
 
 //Display All
@@ -49,7 +50,7 @@ function displayResults(url) {
     .then(function (results) {
       let poses = document.getElementById("results");
       // for (let i = 0; i < results.items.length; i++) {
-      let count = clicked ? 8 : 4;
+      let count = clicked ? `${results.items.length}` : 4;
       for (let i = 0; i < count; i++) {
         let img = results.items[i].img_url;
         let all =

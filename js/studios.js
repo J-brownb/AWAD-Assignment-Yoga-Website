@@ -82,10 +82,10 @@ function initMap() {
           lat.push(results.results[i].geometry.location.lat);
           lng.push(results.results[i].geometry.location.lng);
           title.push(results.results[i].name);
-          console.log(title[i]);
           //call add marker with  array values
-          addMarker({ lat: lat[i], lng: lng[i], title: title[i] });
+          addMarker({ lat: lat[i], lng: lng[i] });
         }
+        console.log(title);
       });
   }
   getLatLng(url);
@@ -94,29 +94,29 @@ function initMap() {
 
   //why wont title push to the marker???
   // function to add marker
-  function addMarker(lat, lng, title) {
+  function addMarker(lat, lng) {
+    // console.log(title);
+
     let marker = new google.maps.Marker({
       position: lat,
       lng,
       map,
-      title: title,
+      title: "Click to zoom in and find out more.",
     });
 
-    //
-
-    // //set info box text
-    // const infoBox = "Need to get this changed!";
-    // const infowindow = new google.maps.InfoWindow({
-    //   content: infoBox,
-    // });
+    //set info box text
+    const infoBox = `Hi`;
+    const infowindow = new google.maps.InfoWindow({
+      content: infoBox,
+    });
 
     marker.addListener("click", () => {
       map.setZoom(15);
       map.setCenter(marker.getPosition());
-      // infowindow.open({
-      //   anchor: marker,
-      //   map,
-      // });
+      infowindow.open({
+        anchor: marker,
+        map,
+      });
     });
   }
 }
