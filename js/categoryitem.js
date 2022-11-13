@@ -14,6 +14,15 @@ dropdown.addEventListener("mouseleave", function () {
   menuItems.style.display = "none";
 });
 
+//Loading Icon
+let loadingIcon = `<div class="d-flex justify-content-center" id="spinner">
+<div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+</div>`;
+let loading = document.getElementById("loadingarea");
+loadingarea.innerHTML = loadingIcon;
+
 //Display All
 function displayResults(url) {
   fetch(url)
@@ -39,6 +48,7 @@ function displayResults(url) {
           `</li>`;
         //Append info to results
         poses.innerHTML += all;
+        loadingarea.innerHTML = " ";
       }
     });
 }
