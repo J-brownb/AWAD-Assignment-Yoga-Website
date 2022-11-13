@@ -80,7 +80,6 @@ function initMap() {
         for (let i = 0; i < results.results.length; i++) {
           lat.push(results.results[i].geometry.location.lat);
           lng.push(results.results[i].geometry.location.lng);
-          title.push(results.results[i].name);
           //call add marker with  array values
           addMarker({ lat: lat[i], lng: lng[i] });
         }
