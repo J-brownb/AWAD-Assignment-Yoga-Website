@@ -19,8 +19,6 @@ dropdown.addEventListener("mouseleave", function () {
   menuItems.style.display = "none";
 });
 
-//alternatively, set count variable out here and add value based on user action
-
 //Load more poses
 let clicked = false;
 let loadMore = document.getElementById("loadmore");
