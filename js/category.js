@@ -38,13 +38,6 @@ function displayResults(url) {
           `<li>` +
           `<img src=${img} width="200" height="200">` +
           `<br>` +
-          // `<h3>` +
-          // `${results.items[i].name}` +
-          // `<h3>` +
-          // `<a href="${catUrl}">` +
-          // `${results.items[i].name}` +
-          // `</a>` +
-          // `</h3>` +
           `</h3>` +
           `<br>` +
           `We have ${results.items[i].yoga_poses.length} ` +

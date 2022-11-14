@@ -104,6 +104,7 @@ function initMap() {
       content: infoBox,
     });
 
+    //on click marker action
     marker.addListener("click", () => {
       map.setZoom(15);
       map.setCenter(marker.getPosition());
