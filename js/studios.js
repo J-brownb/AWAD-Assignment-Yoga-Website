@@ -95,7 +95,7 @@ function initMap() {
       position: lat,
       lng,
       map,
-      title: "Click to zoom in and find out more.",
+      title: "Click to zoom 🔍",
     });
 
     //set info box text
