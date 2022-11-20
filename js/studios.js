@@ -90,7 +90,6 @@ function initMap() {
             `${results.results[i].formatted_address} ` +
             `</div>`;
           addMarker({ lat: lat[i], lng: lng[i] }, (infoBox = content));
-          console.log(content);
         }
       });
   }
@@ -114,7 +113,7 @@ function initMap() {
 
     //on click marker action
     marker.addListener("click", () => {
-      map.setZoom(13);
+      map.setZoom(14);
       map.setCenter(marker.getPosition());
       infowindow.open({
         anchor: marker,
