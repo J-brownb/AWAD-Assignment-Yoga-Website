@@ -81,7 +81,16 @@ function initMap() {
           lat.push(results.results[i].geometry.location.lat);
           lng.push(results.results[i].geometry.location.lng);
           //call add marker with  array values
-          addMarker({ lat: lat[i], lng: lng[i] });
+          let content =
+            `<div style = 'width:200px;min-height:40px'>` +
+            `<strong>` +
+            `${results.results[i].name}` +
+            `</strong>` +
+            `<br>` +
+            `${results.results[i].formatted_address} ` +
+            `</div>`;
+          addMarker({ lat: lat[i], lng: lng[i] }, (infoBox = content));
+          console.log(content);
         }
       });
   }
@@ -90,23 +99,22 @@ function initMap() {
   let map = new google.maps.Map(document.getElementById("map"), options);
 
   // function to add marker
-  function addMarker(lat, lng) {
+  function addMarker(lat, lng, content) {
     let marker = new google.maps.Marker({
       position: lat,
       lng,
       map,
-      title: "Click to zoom 🔍",
+      title: "Click to find out more 🔍",
     });
 
     //set info box text
-    const infoBox = `Hi`;
     const infowindow = new google.maps.InfoWindow({
       content: infoBox,
     });
 
     //on click marker action
     marker.addListener("click", () => {
-      map.setZoom(15);
+      map.setZoom(13);
       map.setCenter(marker.getPosition());
       infowindow.open({
         anchor: marker,
