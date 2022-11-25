@@ -6,9 +6,10 @@
 // Layout
 @import "layout/header";
 @import "layout/navigation";
+@import "layout/footer";
+
 // Components
 @import "components/results";
-@import "components/studio-footer";
 // Pages
 @import "pages/individual";
 @import "pages/category";
@@ -62,27 +63,6 @@ body {
   justify-content: center !important;
 }
 
-.footerhead {
-  font-weight: 600;
-  font-size: 1.4rem;
-  color: $secondary-color;
-  text-align: center;
-}
-
-footer {
-  background-color: $primary-color;
-  text-align: center;
-
-  li {
-    list-style-type: none;
-  }
-
-  .social-icons li {
-    display: inline-block;
-    font-size: 2rem;
-  }
-}
-
 body {
   a {
     color: $secondary-color;
@@ -96,7 +76,6 @@ body {
 
 h1,
 h2 {
-  padding-bottom: 1rem;
   padding: 1rem 0 1rem;
 }
 

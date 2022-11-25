@@ -25,10 +25,12 @@ let loadMore = document.getElementById("loadmore");
 let loadLess = document.getElementById("loadfewer");
 loadMore.addEventListener("click", function () {
   clicked = !clicked;
-  poses.innerHTML = "";
-  displayResults(url);
   loadMore.classList.add("hidden");
   loadLess.classList.remove("hidden");
+  poses.innerHTML = "";
+  document.documentElement.scrollTop = 60;
+
+  displayResults(url);
 });
 
 //Load fewer poses
@@ -38,7 +40,7 @@ loadLess.addEventListener("click", function () {
   displayResults(url);
   loadMore.classList.remove("hidden");
   loadLess.classList.add("hidden");
-  document.documentElement.scrollTop = 50;
+  document.documentElement.scrollTop = 60;
 });
 
 //Display All

@@ -33,6 +33,14 @@
 .loadmore {
   text-align: center;
 }
+
+#loadfewer {
+  position: fixed;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -50%);
+}
+
 .imgborderleft img {
   border: 2px solid #000;
   box-shadow: -10px 10px 0px 0px $tertiary-color;

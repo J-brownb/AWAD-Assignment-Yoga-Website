@@ -1,0 +1,20 @@
+.footerhead {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: $secondary-color;
+  text-align: center;
+}
+
+footer {
+  background-color: $primary-color;
+  text-align: center;
+
+  li {
+    list-style-type: none;
+  }
+
+  .social-icons li {
+    display: inline-block;
+    font-size: 2rem;
+  }
+}
