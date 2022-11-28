@@ -30,7 +30,6 @@ function displayResults(url) {
     .then(function (results) {
       let desc =
         `${results.items[0].yoga_categories[0].description}` +
-        `<br>` +
         ` We currently have ` +
         `${results.items.length}` +
         ` amazing core yoga poses for you to try.`;
