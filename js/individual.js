@@ -60,3 +60,13 @@ function displayResults(url) {
     });
 }
 displayResults(url);
+
+var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+var toastList = toastElList.map(function (toastEl) {
+  return new bootstrap.Toast(toastEl, option);
+});
+
+let toastBtn = document.getElementById("add");
+toastBtn.addEventListener("click", function () {
+  toast.show();
+});
