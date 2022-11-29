@@ -1,6 +1,6 @@
 #results {
   :hover {
-    transform: scale(1.01);
+    // transform: scale(1.01);
     opacity: 1;
   }
 }
@@ -17,10 +17,9 @@
     list-style: none;
     text-align: center;
     background-color: $primary-color;
-    border-radius: 10%;
+    border-radius: 5%;
     margin: 25px;
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
     opacity: 0.8;
-    // border: 1px solid rgb(0, 0, 0);
   }
 }

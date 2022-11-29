@@ -47,7 +47,7 @@
   box-shadow: 10px 10px 0px 0px $tertiary-color;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 760px) {
   body {
     .reverseflex {
       flex-direction: column-reverse;

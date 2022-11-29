@@ -107,7 +107,7 @@ function initMap() {
     });
 
     //set info box text
-    const infowindow = new google.maps.InfoWindow({
+    let infowindow = new google.maps.InfoWindow({
       content: infoBox,
     });
 
@@ -119,6 +119,9 @@ function initMap() {
         anchor: marker,
         map,
       });
+      setTimeout(function () {
+        infowindow.close();
+      }, 3500);
     });
   }
 }
