@@ -61,12 +61,10 @@ function displayResults(url) {
 }
 displayResults(url);
 
-var toastElList = [].slice.call(document.querySelectorAll(".toast"));
-var toastList = toastElList.map(function (toastEl) {
-  return new bootstrap.Toast(toastEl, option);
-});
-
-let toastBtn = document.getElementById("add");
-toastBtn.addEventListener("click", function () {
-  toast.show();
-});
+document.getElementById("add").onclick = function () {
+  let toastElList = [].slice.call(document.querySelectorAll(".toast"));
+  let toastList = toastElList.map(function (toastEl) {
+    return new bootstrap.Toast(toastEl);
+  });
+  toastList.forEach((toast) => toast.show());
+};
