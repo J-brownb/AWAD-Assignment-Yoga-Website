@@ -26,17 +26,6 @@
   margin: 10px;
 }
 
-.loadmore {
-  text-align: center;
-}
-
-#loadfewer {
-  position: fixed;
-  left: 50%;
-  top: 90%;
-  transform: translate(-50%, -50%);
-}
-
 .imgborderleft img {
   border: 2px solid #000;
   box-shadow: -10px 10px 0px 0px $tertiary-color;
@@ -47,7 +36,7 @@
   box-shadow: 10px 10px 0px 0px $tertiary-color;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   body {
     .reverseflex {
       flex-direction: column-reverse;
