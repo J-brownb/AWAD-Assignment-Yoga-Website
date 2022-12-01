@@ -14,10 +14,11 @@ let menuItems = document.getElementById("menuitems");
 dropdown.addEventListener("click", function () {
   menuItems.style.display = "block";
 });
-
 dropdown.addEventListener("mouseleave", function () {
   menuItems.style.display = "none";
 });
+
+//Original code. Had to be removed due to API being shutdown..
 
 //Load more poses
 let clicked = false;
