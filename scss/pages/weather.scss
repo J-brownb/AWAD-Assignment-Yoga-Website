@@ -1,0 +1,19 @@
+#weather {
+  display: flex;
+  overflow: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  // background-color: $primary-color;
+
+  li {
+    width: 250px;
+    margin-bottom: 10px;
+    padding: 25px;
+    list-style-type: none;
+    text-align: center;
+    // background-color: $primary-color;
+    // box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+    // border: 1px solid #000;
+    border-radius: 2%;
+  }
+}

@@ -7,14 +7,15 @@
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/footer";
-
 // Components
 @import "components/results";
+@import "components/benefits";
 // Pages
 @import "pages/individual";
 @import "pages/categoryitem";
 @import "pages/studios";
 @import "pages/home";
+@import "pages/weather";
 // Themes
 @import "themes/theme";
 //Results
@@ -38,6 +39,13 @@ h2 {
   font-weight: 600;
   color: $secondary-color;
 }
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: $secondary-color;
+}
+
 body {
   button {
     background-color: $tertiary-color !important;

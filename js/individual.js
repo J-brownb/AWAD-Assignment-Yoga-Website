@@ -6,61 +6,11 @@ let menuItems = document.getElementById("menuitems");
 dropdown.addEventListener("click", function () {
   menuItems.style.display = "block";
 });
-
 dropdown.addEventListener("mouseleave", function () {
   menuItems.style.display = "none";
 });
 
-//Display results
-function displayResults(url) {
-  fetch(url)
-    .then((response) => response.json())
-    .then(function (results) {
-      let info = document.getElementById("info");
-      //img
-      let img = results.img_url;
-      let imgContainer = document.getElementById("image");
-      imgContainer.innerHTML = `<img src=${img} width="500" height="400">`;
-      //Header
-      let header = document.getElementById("header");
-      let names =
-        `${results.english_name} ` + `| ` + `${results.sanskrit_name} `;
-      header.innerHTML = names;
-
-      let all =
-        `The English name for this pose is ${results.english_name} and the Sanskrit name is ${results.sanskrit_name}. This pose falls under the following categories of yoga:` +
-        `<br>` +
-        `<br>` +
-        `<ul>` +
-        `<li>` +
-        "<strong>" +
-        `${results.yoga_categories[0].name}` +
-        "</strong>" +
-        ` - ` +
-        `${results.yoga_categories[0].description}` +
-        `</li>` +
-        `<br>` +
-        `<li>` +
-        "<strong>" +
-        `${results.yoga_categories[1].name}` +
-        "</strong>" +
-        ` - ` +
-        `${results.yoga_categories[1].description}` +
-        `</li>` +
-        `<br>` +
-        `<li>` +
-        "<strong>" +
-        `${results.yoga_categories[2].name}` +
-        "</strong>" +
-        ` - ` +
-        `${results.yoga_categories[2].description}` +
-        `</li>`;
-      //Append info to results
-      info.innerHTML += all;
-    });
-}
-displayResults(url);
-
+//Toast
 document.getElementById("add").onclick = function () {
   let toastElList = [].slice.call(document.querySelectorAll(".toast"));
   let toastList = toastElList.map(function (toastEl) {
@@ -68,3 +18,55 @@ document.getElementById("add").onclick = function () {
   });
   toastList.forEach((toast) => toast.show());
 };
+
+//Code below removed due to API being shutdown :(
+
+// //Display results
+// function displayResults(url) {
+//   fetch(url)
+//     .then((response) => response.json())
+//     .then(function (results) {
+//       let info = document.getElementById("info");
+//       //img
+//       let img = results.img_url;
+//       let imgContainer = document.getElementById("image");
+//       imgContainer.innerHTML = `<img src=${img} width="500" height="400">`;
+//       //Header
+//       let header = document.getElementById("header");
+//       let names =
+//         `${results.english_name} ` + `| ` + `${results.sanskrit_name} `;
+//       header.innerHTML = names;
+
+//       let all =
+//         `The English name for this pose is ${results.english_name} and the Sanskrit name is ${results.sanskrit_name}. This pose falls under the following categories of yoga:` +
+//         `<br>` +
+//         `<br>` +
+//         `<ul>` +
+//         `<li>` +
+//         "<strong>" +
+//         `${results.yoga_categories[0].name}` +
+//         "</strong>" +
+//         ` - ` +
+//         `${results.yoga_categories[0].description}` +
+//         `</li>` +
+//         `<br>` +
+//         `<li>` +
+//         "<strong>" +
+//         `${results.yoga_categories[1].name}` +
+//         "</strong>" +
+//         ` - ` +
+//         `${results.yoga_categories[1].description}` +
+//         `</li>` +
+//         `<br>` +
+//         `<li>` +
+//         "<strong>" +
+//         `${results.yoga_categories[2].name}` +
+//         "</strong>" +
+//         ` - ` +
+//         `${results.yoga_categories[2].description}` +
+//         `</li>`;
+//       //Append info to results
+//       info.innerHTML += all;
+//     });
+// }
+// displayResults(url);
