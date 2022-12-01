@@ -53,8 +53,6 @@ dropdown.addEventListener("mouseleave", function () {
   menuItems.style.display = "none";
 });
 
-//Original code. Had to be removed due to API being shutdown..
-
 //Load more poses
 let loadMore = document.getElementById("loadmore");
 let loadLess = document.getElementById("loadfewer");
