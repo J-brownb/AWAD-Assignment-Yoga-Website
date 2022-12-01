@@ -8,7 +8,7 @@ dropdown.addEventListener("mouseleave", function () {
   menuItems.style.display = "none";
 });
 
-//Code below removed due to API being shutdown :(
+//Code below removed due to API being shutdown :( left for reference
 
 // let url = "https://lightning-yoga-api.herokuapp.com/yoga_categories";
 // let catName =

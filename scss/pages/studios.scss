@@ -7,3 +7,23 @@
     color: #000 !important;
   }
 }
+
+#results {
+  display: flex;
+  overflow: auto;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+
+  li {
+    width: 300px;
+    padding: 15px;
+    list-style-type: none;
+    text-align: center;
+    background-color: $primary-color;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+    margin: 25px;
+    border: 1px solid #000;
+    border-radius: 2%;
+  }
+}

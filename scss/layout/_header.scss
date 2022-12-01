@@ -1,15 +1,13 @@
 header {
   background-color: $primary-color;
 
-  .page-header-top {
-    // padding: 10px 0 20px 0;
-    // text-align: center;
-    img {
-      max-width: 250px;
-    }
+  img {
+    max-width: 250px;
   }
-}
-
-#drop {
-  display: block;
+  #drop {
+    display: block;
+  }
+  .navbar-toggler {
+    margin-top: 5px;
+  }
 }
