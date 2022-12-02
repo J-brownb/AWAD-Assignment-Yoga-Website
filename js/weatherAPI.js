@@ -61,3 +61,16 @@ weatherCall(7, weather, 1);
 
 //Call function to show current day
 weatherCall(1, single, 0);
+
+//Generate summary
+function dailySummary() {
+  fetch(weatherUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      document.getElementById(summary);
+      let summaryText = `Today will be ${data.days[0].description}`;
+      summary.innerHTML = summaryText;
+    });
+}
+
+dailySummary();
