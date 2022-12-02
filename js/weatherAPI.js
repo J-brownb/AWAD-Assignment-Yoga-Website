@@ -22,10 +22,13 @@ fetch(weatherUrl)
         `<br>` +
         `${data.days[i].datetime}` +
         `<br>` +
+<<<<<<< Updated upstream
         `<strong>` +
         `${data.days[i].conditions}` +
         `</strong>` +
         `<br>` +
+=======
+>>>>>>> Stashed changes
         `${data.days[i].temp}c` +
         `<br>` +
         `${data.days[i].description}` +
@@ -33,6 +36,11 @@ fetch(weatherUrl)
         `</li>`;
       console.log(data.days[i].datetime);
       weather.innerHTML += all;
+<<<<<<< Updated upstream
       loading.innerHTML = "";
     }
+=======
+    }
+    loading.innerHTML = "pog";
+>>>>>>> Stashed changes
   });
