@@ -1,0 +1,35 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  // background: linear-gradient(45deg, #8614ce, #ff0057);
+  // background-color: #7992ea;
+  background-color: $secondary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .bannercontent {
+    position: relative;
+    max-width: 900px;
+    text-align: center;
+
+    h1,
+    p {
+      color: white;
+      margin: 10px;
+      padding: 0;
+    }
+  }
+}
+
+.banner:before {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #fff;
+  clip-path: polygon(100% 60%, 0 100%, 100% 100%);
+}
