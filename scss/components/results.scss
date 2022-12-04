@@ -5,6 +5,7 @@
   margin: 25px;
   border: 1px solid #000;
   border-radius: 2%;
+  justify-content: center;
 
   img {
     margin: 20px;
@@ -12,5 +13,11 @@
 
   button {
     margin: 10px 0 30px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .results {
+    width: 90%;
   }
 }
