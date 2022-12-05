@@ -2,9 +2,11 @@
   text-align: center;
   background-color: $primary-color;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
-  margin: 25px;
+  margin: 20px;
   border: 1px solid #000;
   border-radius: 2%;
+  //fixes issue with row cropping
+  flex-shrink: 1 !important;
 
   img {
     margin: 20px;
@@ -12,11 +14,5 @@
 
   button {
     margin: 10px 0 30px;
-  }
-}
-
-@media only screen and (max-width: 660px) {
-  .results {
-    margin: 0 0 25px 0;
   }
 }

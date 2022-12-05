@@ -1,5 +1,3 @@
-let url = "https://lightning-yoga-api.herokuapp.com/yoga_poses/5";
-
 //Dropdown menu
 let dropdown = document.getElementById("dropdownmenu");
 let menuItems = document.getElementById("menuitems");

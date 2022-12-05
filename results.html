@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/fd9a509bf6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Work+Sans&display=swap"
+    rel="stylesheet"
+  />
+    <title>Search Results</title>
+  </head>
+</html>
+<body>
+  <header>
+      
+    <div class="page-header-top container">
+      <nav class="navbar navbar-expand-lg">
+        <a href="index.html"
+          ><img src="/images/cream logo.png" alt="Yoga Site Logo"
+        /></a>
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar"
+            aria-controls="navbar"
+            aria-expanded="false"
+            aria-label="Toggle
+  navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbar"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html">Home</a>
+              </li>
+              <div id ="dropdownmenu">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Yoga Categories
+                </a>
+                <div class="dropdown-menu" id="menuitems" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/yoga-categories.html">All Categories</a>
+                  <a class="dropdown-item" href="/yoga-categories/core-yoga-poses.html">Core Yoga Poses</a>
+                </div>
+              </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/yoga-individual.html"
+                  >Individual Yoga Exercise</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/find-a-studio.html">Find a Studio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/weather-API.html">Weather API</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </header>
+  <div class="banner">
+    <div class="bannercontent pb-5">
+      <h1>Your Search Results..</h1>
+    </div>
+    </div>
+  <div class="container">
+    <p class="pt-5">
+   <strong>We found 3 results for your query..</strong> 
+    </p>
+    </div>
+    <div class="container pb-5">
+      <div class="row">
+        <div class="col-lg results">
+            <img src="/images/Boat Pose.png" alt="yoga boat pose" width="200" height="200">
+            <br>
+            <p><strong>English Name:</strong> Boat</p>
+            <p><strong>Sanskrit Name:</strong> <i>Navasana</i></p>
+          </div>
+          <div class="col-lg results">
+            <img src="/images/Half Boat (1).png" alt="yoga half boat pose" width="200" height="200">
+            <br>
+            <p><strong>English Name:</strong> Half-Boat</p>
+           <p><strong>Sanskrit Name:</strong> <i>Ardha Navasana</i></p> 
+          </div>
+          <div class="col-lg results">
+            <img src="/images/Forward Bend (1).png" alt="yoga forward bend pose" width="200" height="200">
+            <br>
+            <p><strong>English Name:</strong> Forward Bend</p>
+            <p><strong>Sanskrit Name:</strong> <i>Uttanasana</i></p>
+          </div>
+        </div>
+      </div>
+      <div class="container pb-5 text-center">
+        <h2 class="pb-4">Not quite what you were looking for? Try searching again</h2> 
+       <form action="/results.html">
+        <input
+          class="form-control me-2"
+          id="searching"
+          type="search"
+          placeholder="Search yoga poses.."
+          aria-
+          label="Search"
+          onfocus="this.value=''"
+        />
+        <button id="exerciseSearchBtn" type="submit">
+          Search <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        </form>
+        </p>
+        </div>
+
+    <footer>
+      <div class="container pt-5 pb-5">
+        <div class="row">
+          <div class="col-sm">
+            <p class ="footerhead">Quick Links <i class="fa-solid fa-bolt"></i></p>
+            <ul>
+              <li>
+              <a href="/index.html">Home</a>
+            </li>
+            <li>
+              <a href="/yoga-categories.html"
+                >Yoga Category</a
+              >
+            </li>
+            <li>
+              <a href="/yoga-categories/core-yoga-poses.html"
+                >Core Yoga Poses</a
+              >
+            </li>
+            <li>
+              <a href="/yoga-individual.html"
+                >Individual Yoga Exercise</a
+              >
+            </li>
+            <li >
+              <a href="/find-a-studio.html">Find a Studio</a>
+            </li>
+          </ul>
+          </div>
+          <div class="col-sm">
+            <p class ="footerhead">Find Us <i class="fa-solid fa-location-dot"></i></p>
+            <p>University of Suffolk <br> Waterfront Building <br> 19 Neptune Quay <br> Ipswich, IP4 1QJ</p>
+          </div>
+          <div class="col-sm">
+            <p class ="footerhead">Follow Us <i class="fa-solid fa-thumbs-up"></i></p>
+            <div class="social-icons">
+            <ul>
+              <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-reddit"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+          </div>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="./js/scripts-vendor.min.js"></script>
+  <script src="/js/results.js"></script>
+</html>
