@@ -1,6 +1,6 @@
 //Results
 let url =
-  "https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyCYqnXeh46RRRThzx47Cg0J0DH16Jxcp2Q&query=yoga-studios-in-ipswich";
+  "https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyBYFrQKa4bHc50tjujRorLASx9KypAnKfI&query=yoga-studios-in-ipswich";
 
 //Dropdown menu
 let dropdown = document.getElementById("dropdownmenu");
