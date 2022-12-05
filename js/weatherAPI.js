@@ -78,10 +78,10 @@ function dailySummary() {
       document.getElementById(weeklysummary);
       document.getElementById(summary);
       let summaryText =
-        `Today will be ${data.days[0].description}` +
+        `Today's forecast is expected to be: ${data.days[0].description}` +
         `<br>` +
         `<br>` +
-        `Therer is a ${data.days[0].precipprob}% chance of rain today, the temperature will be ${data.days[0].temp}c and the windspeed will be  ${data.days[0].windspeed}mph`;
+        `There is a ${data.days[0].precipprob}% chance of rain today, the temperature will be ${data.days[0].temp}c and the windspeed will be  ${data.days[0].windspeed}mph`;
       summary.innerHTML += summaryText;
       weeklysummary.innerHTML = `${data.description}`;
     });
