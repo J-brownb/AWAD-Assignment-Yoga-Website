@@ -12,6 +12,12 @@
   opacity: 1;
 }
 
+@media only screen and (max-width: 660px) {
+  .homeh1 {
+    font-size: 2.5rem;
+  }
+}
+
 .highlight {
   background-color: $tertiary-color;
   margin: 10px;
