@@ -21,8 +21,6 @@ loading.innerHTML = loadingIcon;
 let weatherUrl =
   "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/ipswich?unitGroup=metric&key=SNJXA2TKPSX2QQLTQTH6SS6LY&contentType=json";
 
-//Intro
-
 //Function to show weekly forecast
 function weatherCall(count, divID, iCount) {
   fetch(weatherUrl)
@@ -72,7 +70,7 @@ weatherCall(7, weather, 1);
 //Call function to show current day
 weatherCall(1, single, 0);
 
-//Generate summary
+//Generate daily summary
 function dailySummary() {
   fetch(weatherUrl)
     .then((response) => response.json())
