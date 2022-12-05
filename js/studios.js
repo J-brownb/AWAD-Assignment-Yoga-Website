@@ -97,8 +97,10 @@ function initMap() {
 
   let map = new google.maps.Map(document.getElementById("map"), options);
 
+  let activeWindow;
+
   // function to add marker
-  function addMarker(lat, lng) {
+  function addMarker(lat, lng, content) {
     let marker = new google.maps.Marker({
       position: lat,
       lng,
@@ -113,12 +115,17 @@ function initMap() {
 
     //on click marker action
     marker.addListener("click", () => {
+      //close any open windows
+      if (activeWindow) {
+        activeWindow.close();
+      }
       map.setZoom(14);
       map.setCenter(marker.getPosition());
       infowindow.open({
         anchor: marker,
         map,
       });
+      activeWindow = infowindow;
     });
   }
 }
