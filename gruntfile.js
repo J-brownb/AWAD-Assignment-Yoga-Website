@@ -31,7 +31,7 @@ module.exports = function (grunt) {
         },
       },
       js: {
-        files: ["./js/*.js"],
+        files: ["./scripts/*.js"],
         tasks: ["uglify:main"],
         options: {
           spawn: false,
@@ -47,7 +47,7 @@ module.exports = function (grunt) {
           mangle: false,
         },
         files: {
-          "./js/scripts.min.js": ["./js/*.js"],
+          "./js/scripts.min.js": ["./scripts/*.js"],
         },
       },
       vendor: {
