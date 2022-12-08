@@ -47,7 +47,7 @@ module.exports = function (grunt) {
           mangle: false,
         },
         files: {
-          "./js/scripts.min.js": ["./scripts/*.js"],
+          "./js/scripts.min.js": ["./js/*.js"],
         },
       },
       vendor: {
