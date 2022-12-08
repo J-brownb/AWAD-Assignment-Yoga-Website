@@ -31,7 +31,7 @@ module.exports = function (grunt) {
         },
       },
       js: {
-        files: ["./scripts/**/*.js"],
+        files: ["./js/*.js"],
         tasks: ["uglify:main"],
         options: {
           spawn: false,
