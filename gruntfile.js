@@ -47,7 +47,10 @@ module.exports = function (grunt) {
           mangle: false,
         },
         files: {
-          "./js/scripts.min.js": ["./scripts/*.js"],
+          "./js/home.min.js": ["./scripts/home.js"],
+          "./js/studios.min.js": ["./scripts/studios.js"],
+          "./js/weatherAPI.min.js": ["./scripts/weatherAPI.js"],
+          "./js/individual.min.js": ["./scripts/individual.js"],
         },
       },
       vendor: {
