@@ -48,14 +48,14 @@ function weatherCall(count, divID, iCount) {
           `<br>` +
           `<br>` +
           `🌡️ ${data.days[i].temp}c` +
-          ` |` +
+          `<br>` +
           ` 🌧️ ${data.days[i].precipprob}%` +
           ` |` +
-          `💨 ${data.days[i].windspeed}mph` +
+          ` 💨 ${data.days[i].windspeed}mph` +
           `<br>` +
           `☀️ ${sunriseShort}AM` +
           ` |` +
-          `🌕 ${sunsetShort}PM` +
+          ` 🌕 ${sunsetShort}PM` +
           `<hr>` +
           `${data.days[i].description}` +
           `<br>` +
