@@ -88,5 +88,3 @@ function dailySummary() {
 }
 
 dailySummary();
-
-console.log("test");
