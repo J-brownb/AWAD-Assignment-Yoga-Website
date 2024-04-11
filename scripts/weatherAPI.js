@@ -19,7 +19,7 @@ loading.innerHTML = loadingIcon;
 
 //API call
 let weatherUrl =
-  "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/ipswich?unitGroup=metric&key=SNJXA2TKPSX2QQLTQTH6SS6LY&contentType=json";
+  "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/ipswich?unitGroup=metric&key=XXX&contentType=json";
 
 //Function to show weekly forecast
 function weatherCall(count, divID, iCount) {
